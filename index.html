@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Habeeban Memon | AI &amp; ML Researcher</title>
+  <meta name="description" content="Portfolio of Habeeban Memon, Computer Systems Engineering student specializing in AI, Machine Learning, and Computer Vision." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-wrap">
+    <a href="#home" class="nav-brand">HM</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="assets/MY_CV.pdf" target="_blank" class="nav-cv-link"><strong><i class="fas fa-file-download"></i> CV</strong></a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-btn" id="themeToggle" title="Toggle theme">
+        <i class="fas fa-sun" id="themeIcon"></i>
+      </button>
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="mob-menu" id="mobMenu">
+  <button class="mob-close" id="mobClose"><i class="fas fa-times"></i></button>
+  <ul>
+    <li><a href="#about"          onclick="closeMob()">About</a></li>
+    <li><a href="#education"      onclick="closeMob()">Education</a></li>
+    <li><a href="#experience"     onclick="closeMob()">Experience</a></li>
+    <li><a href="#projects"       onclick="closeMob()">Projects</a></li>
+    <li><a href="#publications"   onclick="closeMob()">Publications</a></li>
+    <li><a href="#certifications" onclick="closeMob()">Certifications</a></li>
+    <li><a href="#contact"        onclick="closeMob()">Contact</a></li>
+    <li><a href="assets/MY_CV.pdf" target="_blank" onclick="closeMob()"><i class="fas fa-file-download"></i> Download CV</a></li>
+  </ul>
+</div>
+<div class="mob-backdrop" id="mobBackdrop" onclick="closeMob()"></div>
+
+<section id="home" class="hero">
+  <div class="hero-orb orb-a"></div>
+  <div class="hero-orb orb-b"></div>
+  <div class="hero-grid-bg"></div>
+
+  <div class="hero-body">
+    <div class="avatar-wrap">
+      <div class="avatar">
+        <img src="profile.jpg" alt="Habeeban Memon"
+             onerror="this.style.display='none';document.getElementById('aFallback').style.display='flex';" />
+        <div class="avatar-fallback" id="aFallback"><i class="fas fa-user-graduate"></i></div>
+      </div>
+      <div class="avatar-glow"></div>
+    </div>
+
+    <div class="hero-content">
+      <span class="hero-tag">Computer Systems Engineering Student</span>
+      <h1 class="hero-name">Habeeban Memon</h1>
+      <p class="hero-roles">AI Researcher &nbsp;&bull;&nbsp; Computer Vision &nbsp;&bull;&nbsp; Deep Learning &nbsp;&bull;&nbsp; Signal Processing</p>
+
+      <p class="hero-bio">
+        Passionate about advancing intelligent systems through research in defect detection,
+        image super-resolution, and signal processing. Based in Sukkur, Sindh, Pakistan.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#publications" class="btn-primary">View Research</a>
+        <a href="#contact"      class="btn-ghost">Get in Touch</a>
+      </div>
+
+      <div class="hero-socials">
+        <a href="assets/MY_CV.pdf" target="_blank"                        title="Download CV"  class="soc-btn" style="background: var(--accent); color: white;"><i class="fas fa-file-pdf"></i></a>
+        <a href="mailto:Habeebanmemon73@gmail.com"                                       title="Email"        class="soc-btn"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/habeeban-memon-15557b253/" target="_blank"  title="LinkedIn"     class="soc-btn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/HabeebanMemon"                       target="_blank"  title="GitHub"       class="soc-btn"><i class="fab fa-github"></i></a>
+        <a href="https://scholar.google.com/citations?hl=en&user=NN9V4M8AAAAJ" target="_blank" title="Google Scholar" class="soc-btn"><i class="fas fa-graduation-cap"></i></a>
+        <a href="https://www.kaggle.com/habeebanmemon"                   target="_blank"  title="Kaggle"       class="soc-btn"><i class="fab fa-kaggle"></i></a>
+        <a href="https://www.researchgate.net/profile/Habeeban-Memon"    target="_blank"  title="ResearchGate" class="soc-btn"><i class="fas fa-flask"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section bg-alt">
+  <div class="wrap">
+    <div class="sec-hd">
+      <span class="sec-tag">01 &mdash; About</span>
+      <h2>About Me</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-bio reveal">
+        <p>I am a final-year Computer Systems Engineering student at <strong>Sukkur IBA University</strong>,
+        maintaining a CGPA of <strong>3.50 / 4.00</strong> in a PEC-accredited (Washington Accord) program.</p>
+
+        <p>My research spans <strong>computer vision</strong>, <strong>non-destructive testing</strong>,
+        <strong>digital signal processing</strong>, and <strong>multi-modal deep learning</strong>.
+        I have contributed to published and in-preparation work covering CFRP defect detection,
+        DDoS mitigation using transformers, and fake-news detection using evidential fusion.</p>
+
+        <p>Beyond research, I have real-world internship experience integrating AI workflows in healthcare
+        and conducting systems-engineering analysis at a national insurance corporation.</p>
+
+        <div class="quick-facts">
+          <div class="qf"><i class="fas fa-map-marker-alt"></i><span>Sukkur, Sindh, Pakistan</span></div>
+          <div class="qf"><i class="fas fa-graduation-cap"></i><span>B.E. Computer Systems Engineering</span></div>
+          <div class="qf"><i class="fas fa-star"></i><span>CGPA 3.50 / 4.00</span></div>
+          <div class="qf"><i class="fas fa-file-alt"></i><span>4 Research Publications</span></div>
+        </div>
+      </div>
+
+      <div class="about-right reveal">
+        <h3 class="side-title">Research Interests</h3>
+        <div class="tags">
+          <span>Computer Vision</span><span>Machine Learning</span><span>Deep Learning</span>
+          <span>Image Processing</span><span>Digital Signal Processing</span><span>Audio Processing</span>
+          <span>Object Detection</span><span>Non-Destructive Testing</span><span>Transformers</span>
+          <span>Image Super-Resolution</span><span>Intelligent Systems</span><span>Multimodal AI</span>
+        </div>
+
+        <h3 class="side-title" style="margin-top:2rem;">Technical Stack</h3>
+        <div class="stack">
+          <div class="stack-row"><span class="sl">Languages</span><span class="sv">Python, MATLAB, C#, SQL</span></div>
+          <div class="stack-row"><span class="sl">Frameworks</span><span class="sv">TensorFlow, PyTorch, OpenCV, Scikit-learn</span></div>
+          <div class="stack-row"><span class="sl">Libraries</span><span class="sv">NumPy, Pandas, Matplotlib, SciPy, PyWavelets</span></div>
+          <div class="stack-row"><span class="sl">Tools</span><span class="sv">Jupyter, Streamlit, Git, MySQL, ROS 2</span></div>
+          <div class="stack-row"><span class="sl">Web</span><span class="sv">ASP.NET, C#, JavaScript, HTML, CSS</span></div>
+          <div class="stack-row"><span class="sl">Embedded</span><span class="sv">ESP32, IoT, URDF, Gazebo, VHDL</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education" class="section">
+  <div class="wrap">
+    <div class="sec-hd">
+      <span class="sec-tag">02 &mdash; Education</span>
+      <h2>Education</h2>
+    </div>
+
+    <div class="edu-card reveal">
+      <div class="edu-icon-wrap"><i class="fas fa-university"></i></div>
+      <div class="edu-body">
+        <div class="edu-meta">
+          <span class="edu-date">September 2022 &ndash; June 2026</span>
+          <span class="pill pill-blue">In Progress</span>
+        </div>
+        <h3>Bachelor of Engineering in Computer Systems Engineering</h3>
+        <a href="https://www.iba-suk.edu.pk" target="_blank" class="edu-uni">
+          <i class="fas fa-external-link-alt"></i> Sukkur IBA University, Sindh, Pakistan
+        </a>
+        <div class="edu-stats">
+          <div class="edu-stat"><span>CGPA</span><strong>3.50 / 4.00</strong></div>
+          <div class="edu-stat"><span>Accreditation</span><strong>PEC Level-II (Washington Accord)</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="section bg-alt">
+  <div class="wrap">
+    <div class="sec-hd">
+      <span class="sec-tag">03 &mdash; Experience</span>
+      <h2>Work Experience</h2>
+    </div>
+
+    <div class="timeline">
+
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-body">
+          <div class="tl-meta">
+            <span class="tl-date">July 2025 &ndash; August 2025</span>
+            <span class="pill pill-green">Remote</span>
+          </div>
+          <h3>AI and Web Development Intern</h3>
+          <p class="tl-org"><i class="fas fa-building"></i> VitaNova &ndash; International Alliance for Sciences</p>
+          <ul class="tl-list">
+            <li>Integrated AI tools (ChatGPT, Perplexity, GravityWrite) into research and clinical diagnosis workflows to optimize professional communication and healthcare innovation.</li>
+            <li>Engineered a professional digital portfolio using Google Sites, implementing cloud service models (IaaS, PaaS, SaaS) and web infrastructure principles.</li>
+            <li>Applied Ethical AI frameworks to sustainable development goals, focusing on responsible AI design and machine learning workflows in engineering.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-body">
+          <div class="tl-meta">
+            <span class="tl-date">June 2025 &ndash; July 2025</span>
+            <span class="pill pill-purple">On-Site</span>
+          </div>
+          <h3>Systems Engineering Intern</h3>
+          <p class="tl-org"><i class="fas fa-building"></i> State Life Insurance Corporation of Pakistan, Sukkur</p>
+          <ul class="tl-list">
+            <li>Conducted a comprehensive SWOT analysis of corporate digital infrastructure, identifying key areas for process automation and technical upgrades.</li>
+            <li>Analyzed departmental workflows across Real Estate, P&amp;GS, and IT to propose digitization strategies for manual insurance claim tracking.</li>
+            <li>Gained hands-on experience in large-scale corporate systems engineering and policy management.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="section">
+  <div class="wrap">
+    <div class="sec-hd">
+      <span class="sec-tag">04 &mdash; Projects</span>
+      <h2>Projects</h2>
+    </div>
+
+    <div class="proj-grid">
+
+      <div class="proj-card featured reveal">
+        <div class="proj-header">
+          <span class="proj-num">01</span>
+          <span class="pill pill-gold">Research Framework</span>
+        </div>
+        <h3>OPT Defect Detection, Segmentation &amp; Depth Inspection Framework</h3>
+        <p>Complete framework for automated detection, segmentation, and depth estimation of subsurface defects in Carbon Fiber Reinforced Polymer (CFRP) composites using Optical Pulse Thermography. Combines object detection, semantic segmentation, and physics-informed ML regression for depth prediction, bridging raw thermographic data to actionable defect intelligence.</p>
+        <div class="proj-tags"><span>YOLOv8</span><span>Mask R-CNN</span><span>CFRP</span><span>OPT</span><span>NDE</span><span>Depth Estimation</span></div>
+      </div>
+
+      <div class="proj-card reveal">
+        <div class="proj-header">
+          <span class="proj-num">02</span>
+          <a href="https://github.com/HabeebanMemon/SpeechEnhancement-through-Advanced-DSPTechniques" target="_blank" class="gh-link" title="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+        <h3>Speech Enhancement via Advanced DSP</h3>
+        <p>End-to-end audio processing system restoring speech clarity in high-noise environments using spectral subtraction, noise gating, STFT/ISTFT processing, and Butterworth filter design. Evaluated via SNR analysis and spectrogram visualization.</p>
+        <div class="proj-tags"><span>Python</span><span>DSP</span><span>STFT</span><span>Butterworth</span></div>
+      </div>
+
+      <div class="proj-card reveal">
+        <div class="proj-header">
+          <span class="proj-num">03</span>
+          <a href="https://github.com/HabeebanMemon/ImageCompression-Analysis" target="_blank" class="gh-link" title="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+        <h3>Image Compression Analysis</h3>
+        <p>Rigorous comparison of DCT-based JPEG vs. Wavelet-based JPEG2000. Custom Python pipeline (OpenCV, PyWavelets) with automated PSNR and SSIM metrics plus difference-map visualizations across various compression ratios.</p>
+        <div class="proj-tags"><span>OpenCV</span><span>PyWavelets</span><span>JPEG2000</span><span>PSNR</span></div>
+      </div>
+
+      <div class="proj-card reveal">
+        <div class="proj-header">
+          <span class="proj-num">04</span>
+          <a href="https://github.com/HabeebanMemon/RealTime-Speech-Enhancement-System-Using-DSPTechniques" target="_blank" class="gh-link" title="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+        <h3>Real-Time Speech Enhancement System</h3>
+        <p>High-performance multi-stage pipeline: Noise Spectrum Estimation, Spectral Subtraction, and Butterworth Band-Pass filtering. Robust SNR evaluation suite with comparative spectrogram generation to validate processing efficacy.</p>
+        <div class="proj-tags"><span>Real-Time DSP</span><span>Spectral Subtraction</span><span>SNR</span></div>
+      </div>
+
+      <div class="proj-card reveal">
+        <div class="proj-header">
+          <span class="proj-num">05</span>
+          <a href="https://github.com/HabeebanMemon/smart-elevator-controller" target="_blank" class="gh-link" title="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+        <h3>Smart Elevator Controller</h3>
+        <p>Digital elevator controller for 5 floors (0 to 4) using a Moore Finite State Machine. Manhattan distance-based nearest-request algorithm and timer-controlled door dwell. Verified via comprehensive behavioral simulation and testbench scenarios.</p>
+        <div class="proj-tags"><span>VHDL</span><span>FSM</span><span>Digital Logic</span></div>
+      </div>
+
+      <div class="proj-card reveal">
+        <div class="proj-header">
+          <span class="proj-num">06</span>
+          <a href="https://github.com/HabeebanMemon/iot-health-monitor-esp32" target="_blank" class="gh-link" title="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+        <h3>IoT Health Monitor (ESP32)</h3>
+        <p>Low-cost real-time health monitoring using ESP32 with PulseSensor and LM35 sensors. Streams physiological data to the Blynk app, with threshold-based emergency email alerts and dual visualization via LCD and cloud dashboards.</p>
+        <div class="proj-tags"><span>ESP32</span><span>IoT</span><span>Blynk</span><span>Embedded C</span></div>
+      </div>
+
+      <div class="proj-card reveal">
+        <div class="proj-header">
+          <span class="proj-num">07</span>
+          <a href="https://github.com/HabeebanMemon/obstacle-aware-ros2-bot" target="_blank" class="gh-link" title="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+        <h3>Obstacle-Aware ROS2 Robot</h3>
+        <p>Mobile robot simulation in ROS 2 Humble and Gazebo. Custom 4-wheeled URDF robot with dual-sensor suite (Sonar and Camera) enabling obstacle awareness, providing a foundation for autonomous navigation and environment mapping.</p>
+        <div class="proj-tags"><span>ROS 2</span><span>Gazebo</span><span>URDF</span><span>Autonomous</span></div>
+      </div>
+
+      <div class="proj-card reveal">
+        <div class="proj-header">
+          <span class="proj-num">08</span>
+          <a href="https://github.com/HabeebanMemon/matlab-voice-recognition-fft" target="_blank" class="gh-link" title="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+        <h3>MATLAB Voice Recognition via FFT</h3>
+        <p>Speaker identification converting time-domain voice signals to frequency-domain via FFT to extract unique pitch characteristics. Custom MATLAB training and testing workflow using mathematical distance-based identification for biometric security.</p>
+        <div class="proj-tags"><span>MATLAB</span><span>FFT</span><span>Signal Processing</span></div>
+      </div>
+
+      <div class="proj-card reveal">
+        <div class="proj-header">
+          <span class="proj-num">09</span>
+          <a href="https://github.com/HabeebanMemon/StudentManagement-System" target="_blank" class="gh-link" title="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+        <h3>Student Management System with ML</h3>
+        <p>Desktop application digitalizing academic administration with role-based access control (Admin, Teacher, Student, Parent), secure MySQL integration, and an embedded ML module providing predictive analytics on student outcomes.</p>
+        <div class="proj-tags"><span>Python</span><span>MySQL</span><span>Machine Learning</span></div>
+      </div>
+
+      <div class="proj-card reveal">
+        <div class="proj-header">
+          <span class="proj-num">10</span>
+          <a href="https://github.com/HabeebanMemon/HospitalManagmentSystem" target="_blank" class="gh-link" title="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+        <h3>Hospital Management System (CHMS)</h3>
+        <p>Full-stack web platform managing patient records, doctor schedules, and billing. Built with ASP.NET, C#, and JavaScript. Fully deployed and live at <a href="http://chms.somee.com" target="_blank" class="inline-a">chms.somee.com</a>.</p>
+        <div class="proj-tags"><span>ASP.NET</span><span>C#</span><span>JavaScript</span><span>SQL Server</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="publications" class="section bg-alt">
+  <div class="wrap">
+    <div class="sec-hd">
+      <span class="sec-tag">05 &mdash; Publications</span>
+      <h2>Publications</h2>
+    </div>
+
+    <div class="pub-list">
+
+      <div class="pub-card reveal">
+        <div class="pub-num">01</div>
+        <div class="pub-body">
+          <span class="pub-pill pub-published">Published</span>
+          <h3>Mitigation of DDoS Attacks with Machine Learning, Deep Learning, and Transformers</h3>
+          <p class="pub-authors">Zain Ul Abidin, Haseeb, Muhammad Younis, <strong>Habeeban Memon</strong>, Junaid Ahmed Bhatti</p>
+          <p class="pub-venue"><i class="fas fa-book-open"></i> International Journal of Multidisciplinary Conference Proceedings (IJMCP), 2(1)</p>
+          <p class="pub-summary">Evaluates various ML and DL models for multi-class DDoS detection using the CICDDoS2019 dataset. Tree-based models (LightGBM, XGBoost) achieve the highest accuracy with fast execution times, making them effective for real-time cybersecurity applications.</p>
+          <a href="https://doi.org/10.61503/Ijmcp.v2i1.181" target="_blank" class="doi-link"><i class="fas fa-external-link-alt"></i> DOI: 10.61503/Ijmcp.v2i1.181</a>
+        </div>
+      </div>
+
+      <div class="pub-card reveal">
+        <div class="pub-num">02</div>
+        <div class="pub-body">
+          <span class="pub-pill pub-accepted">Accepted</span>
+          <h3>Debond Detection in CFRP Structures using Optical Pulse Thermography and Deep Learning</h3>
+          <p class="pub-authors"><strong>Habeeban Memon</strong>, Zain Ul Abidin, Junaid Ahmed, Ayesha Siddiqua</p>
+          <p class="pub-venue"><i class="fas fa-book-open"></i> International Conference on Computing, Engineering, Mathematics and Modern Technologies (iCoMET)</p>
+          <p class="pub-summary">Explores deep learning architectures (YOLOv8, Faster R-CNN, Mask R-CNN) for automating debonding defect detection in CFRP composites. YOLOv8 is optimal for rapid screening; Mask R-CNN provides highest accuracy with precise pixel-wise segmentation.</p>
+        </div>
+      </div>
+
+      <div class="pub-card reveal">
+        <div class="pub-num">03</div>
+        <div class="pub-body">
+          <span class="pub-pill pub-prep">In Preparation</span>
+          <h3>Automated Defect Detection in CFRP Composites Using Multi-Modal Thermal Representations and Deep Learning</h3>
+          <p class="pub-authors">Zain Ul Abidin, <strong>Habeeban Memon</strong>, Junaid Ahmed, Ayesha Siddiqua</p>
+          <p class="pub-summary">Introduces a novel three-channel thermal representation embedding raw spatial intensity, PCA variance structure, and thermographic signal reconstruction within unified input tensors. Yields up to <strong>154% relative gains</strong> in segmentation accuracy and physics-informed depth estimation for 3D defect reconstruction.</p>
+        </div>
+      </div>
+
+      <div class="pub-card reveal">
+        <div class="pub-num">04</div>
+        <div class="pub-body">
+          <span class="pub-pill pub-prep">In Preparation</span>
+          <h3>A Robust Multimodal Framework for Fake News Detection using Evidential Fusion and Explainable AI</h3>
+          <p class="pub-authors"><strong>Habeeban Memon</strong>, Zain Ul Abidin, Umair Ayaz Kamangar</p>
+          <p class="pub-summary">Implements a multimodal fake news detection framework combining DeBERTa-v3 for textual analysis and Vision Transformers (ViT) for image processing. Captures deep semantic and visual features enhanced by evidential fusion and Explainable AI interpretability.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="certifications" class="section">
+  <div class="wrap">
+    <div class="sec-hd">
+      <span class="sec-tag">06 &mdash; Certifications</span>
+      <h2>Certifications</h2>
+    </div>
+
+    <div class="cert-grid">
+
+      <div class="cert-card reveal">
+        <div class="cert-icon"><i class="fas fa-award"></i></div>
+        <h3>Deep Learning Specialization</h3>
+        <p class="cert-issuer">Udemy</p>
+        <p>Neural networks, training deep learning models, activation functions, backpropagation, gradient descent, and real-world image recognition applications.</p>
+        <a href="https://www.udemy.com/certificate/UC-a83a4081-0607-4cff-a5cd-acbdb0b7bcd1" target="_blank" class="cert-link">View Certificate <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="cert-card reveal">
+        <div class="cert-icon"><i class="fas fa-award"></i></div>
+        <h3>Advanced Learning Algorithms</h3>
+        <p class="cert-issuer">Coursera</p>
+        <p>Deep neural networks, forward and backward propagation, Adam and RMSprop optimization, dropout, batch normalization, and hyperparameter tuning for complex pattern recognition.</p>
+        <a href="https://www.coursera.org/account/accomplishments/records/WXUDC966IVO9" target="_blank" class="cert-link">View Certificate <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="cert-card reveal">
+        <div class="cert-icon"><i class="fas fa-award"></i></div>
+        <h3>Machine Learning Specialization</h3>
+        <p class="cert-issuer">Coursera (Andrew Ng)</p>
+        <p>Supervised models, neural networks, decision trees, unsupervised learning, recommender systems, anomaly detection, and deep reinforcement learning.</p>
+        <a href="https://www.coursera.org/account/accomplishments/specialization/OI2BG4LQTSBF" target="_blank" class="cert-link">View Certificate <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="cert-card reveal">
+        <div class="cert-icon"><i class="fas fa-award"></i></div>
+        <h3>Unsupervised Learning, Recommenders &amp; Reinforcement Learning</h3>
+        <p class="cert-issuer">Coursera</p>
+        <p>Clustering, anomaly detection, collaborative filtering, content-based deep learning for recommenders, and building deep reinforcement learning models.</p>
+        <a href="https://www.coursera.org/account/accomplishments/records/6NOYBV68ZYE2" target="_blank" class="cert-link">View Certificate <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="cert-card reveal">
+        <div class="cert-icon"><i class="fas fa-award"></i></div>
+        <h3>Supervised ML: Regression &amp; Classification</h3>
+        <p class="cert-issuer">Coursera</p>
+        <p>ML models with NumPy and scikit-learn, linear regression, logistic regression, feature engineering, data preprocessing, and model evaluation techniques.</p>
+        <a href="https://www.coursera.org/account/accomplishments/verify/80M6YK77N1YF" target="_blank" class="cert-link">View Certificate <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section bg-alt">
+  <div class="wrap">
+    <div class="sec-hd">
+      <span class="sec-tag">07 &mdash; Contact</span>
+      <h2>Get in Touch</h2>
+    </div>
+
+    <p class="contact-intro reveal">Open to research collaborations, academic opportunities, and engineering roles. Reach out through any of the channels below.</p>
+
+    <div class="contact-grid reveal">
+
+      <a href="assets/MY_CV.pdf" target="_blank" class="ccard" style="border: 1px solid var(--border-a); background: var(--bg-hover);">
+        <div class="ccard-icon" style="color: var(--accent);"><i class="fas fa-file-pdf"></i></div>
+        <div class="ccard-text">
+          <span class="ccard-label" style="font-weight: 600;">Curriculum Vitae (CV)</span>
+          <span class="ccard-val">Open / Download PDF Document</span>
+        </div>
+      </a>
+
+      <a href="mailto:Habeebanmemon73@gmail.com" class="ccard">
+        <div class="ccard-icon"><i class="fas fa-envelope"></i></div>
+        <div class="ccard-text">
+          <span class="ccard-label">Personal Email</span>
+          <span class="ccard-val">Habeebanmemon73@gmail.com</span>
+        </div>
+      </a>
+
+      <a href="mailto:habeebanmemon.becsef22@iba-suk.edu.pk" class="ccard">
+        <div class="ccard-icon"><i class="fas fa-university"></i></div>
+        <div class="ccard-text">
+          <span class="ccard-label">University Email</span>
+          <span class="ccard-val">habeebanmemon.becsef22@iba-suk.edu.pk</span>
+        </div>
+      </a>
+
+      <a href="tel:+923030658858" class="ccard">
+        <div class="ccard-icon"><i class="fas fa-phone"></i></div>
+        <div class="ccard-text">
+          <span class="ccard-label">Phone</span>
+          <span class="ccard-val">+92 303 065 8858</span>
+        </div>
+      </a>
+
+      <a href="https://scholar.google.com/citations?hl=en&user=NN9V4M8AAAAJ" target="_blank" class="ccard">
+        <div class="ccard-icon"><i class="fas fa-graduation-cap"></i></div>
+        <div class="ccard-text">
+          <span class="ccard-label">Google Scholar</span>
+          <span class="ccard-val">scholar.google.com/citations?user=NN9V4M8AAAAJ</span>
+        </div>
+      </a>
+
+      <a href="https://www.linkedin.com/in/habeeban-memon-15557b253/" target="_blank" class="ccard">
+        <div class="ccard-icon"><i class="fab fa-linkedin-in"></i></div>
+        <div class="ccard-text">
+          <span class="ccard-label">LinkedIn ID</span>
+          <span class="ccard-val">linkedin.com/in/habeeban-memon-15557b253</span>
+        </div>
+      </a>
+
+      <a href="https://github.com/HabeebanMemon" target="_blank" class="ccard">
+        <div class="ccard-icon"><i class="fab fa-github"></i></div>
+        <div class="ccard-text">
+          <span class="ccard-label">GitHub ID</span>
+          <span class="ccard-val">github.com/HabeebanMemon</span>
+        </div>
+      </a>
+
+      <a href="https://www.researchgate.net/profile/Habeeban-Memon" target="_blank" class="ccard">
+        <div class="ccard-icon"><i class="fas fa-flask"></i></div>
+        <div class="ccard-text">
+          <span class="ccard-label">ResearchGate ID</span>
+          <span class="ccard-val">researchgate.net/profile/Habeeban-Memon</span>
+        </div>
+      </a>
+
+      <a href="https://www.kaggle.com/habeebanmemon" target="_blank" class="ccard">
+        <div class="ccard-icon"><i class="fab fa-kaggle"></i></div>
+        <div class="ccard-text">
+          <span class="ccard-label">Kaggle ID</span>
+          <span class="ccard-val">kaggle.com/habeebanmemon</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="fb-logo">HM</span>
+        <div class="fb-info">
+          <p class="fb-name">Habeeban Memon</p>
+          <p class="fb-sub">AI Researcher &nbsp;&bull;&nbsp; Computer Vision &nbsp;&bull;&nbsp; Deep Learning</p>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="assets/MY_CV.pdf" target="_blank" title="CV"><i class="fas fa-file-pdf"></i></a>
+        <a href="mailto:Habeebanmemon73@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/habeeban-memon-15557b253/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/HabeebanMemon" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://scholar.google.com/citations?hl=en&user=NN9V4M8AAAAJ" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+        <a href="https://www.kaggle.com/habeebanmemon" target="_blank" title="Kaggle"><i class="fab fa-kaggle"></i></a>
+        <a href="https://www.researchgate.net/profile/Habeeban-Memon" target="_blank" title="ResearchGate"><i class="fas fa-flask"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="yr"></span> Habeeban Memon. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<button class="back-top" id="backTop" title="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Theme
+  const root  = document.documentElement;
+  const tBtn  = document.getElementById('themeToggle');
+  const tIco  = document.getElementById('themeIcon');
+  const saved = localStorage.getItem('hm-theme') || 'light';
+  root.setAttribute('data-theme', saved);
+  tIco.className = saved === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+  tBtn.addEventListener('click', () => {
+    const n = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', n);
+    localStorage.setItem('hm-theme', n);
+    tIco.className = n === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+  });
+
+  // Burger
+  const burger = document.getElementById('burger');
+  const mob    = document.getElementById('mobMenu');
+  const back   = document.getElementById('mobBackdrop');
+  burger.addEventListener('click', () => {
+    mob.classList.toggle('open');
+    back.classList.toggle('open');
+    burger.classList.toggle('open');
+  });
+  function closeMob() {
+    mob.classList.remove('open');
+    back.classList.remove('open');
+    burger.classList.remove('open');
+  }
+  document.getElementById('mobClose').addEventListener('click', closeMob);
+
+  // Navbar
+  const nb   = document.getElementById('navbar');
+  const bt   = document.getElementById('backTop');
+  window.addEventListener('scroll', () => {
+    nb.classList.toggle('solid', window.scrollY > 60);
+    bt.classList.toggle('show',  window.scrollY > 500);
+  });
+  bt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+  // Reveal
+  const revs = document.querySelectorAll('.reveal');
+  const obs  = new IntersectionObserver(es => {
+    es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  revs.forEach(el => obs.observe(el));
+
+  // Active nav
+  const secs  = document.querySelectorAll('section[id]');
+  const anchors = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let cur = '';
+    secs.forEach(s => { if (window.scrollY >= s.offsetTop - 130) cur = s.id; });
+    anchors.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
+  });
+</script>
+</body>
+</html>
